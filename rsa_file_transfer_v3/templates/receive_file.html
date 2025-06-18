@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nhận file</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>📥 File đã nhận</h2>
+    <ul>
+      {% for f in files %}
+        <li>
+          📄 {{ f.filename }} từ <b>{{ f.sender }}</b> lúc {{ f.timestamp }}
+          <a href="/download/{{ f.stored_filename }}">Tải về</a>
+        </li>
+      {% else %}
+        <p>Chưa có file nào được nhận.</p>
+      {% endfor %}
+    </ul>
+    <a href="/dashboard">⬅️ Quay lại</a>
+  </div>
+</body>
+</html>

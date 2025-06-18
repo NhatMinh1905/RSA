@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html><body>
+  <h2>Transfer History</h2>
+  <ul>
+    {% for h in history %}
+      <li>{{ h.sender }} sent "{{ h.file }}" to {{ h.receiver }}</li>
+    {% endfor %}
+  </ul>
+</body></html>

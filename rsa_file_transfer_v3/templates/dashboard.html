@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bảng điều khiển</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Xin chào, {{ session.user }}</h2>
+    <div class="nav">
+      <a href="/send">📤 Gửi File</a>
+      <a href="/receive">📥 Nhận File</a>
+      <a href="/history">🕓 Lịch Sử</a>
+      <a href="/logout">🚪 Đăng xuất</a>
+    </div>
+  </div>
+</body>
+</html>
